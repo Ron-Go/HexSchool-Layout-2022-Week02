@@ -1,0 +1,145 @@
+/*------------------------------------*\
+    $index
+\*------------------------------------*/
+
+
+// header
+header{
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week2/banner.png?raw=true);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header{
+  &__subtitle{
+    line-height: $spacer * 2;
+  }
+  &__body{
+    padding: 0 8px;
+    &__content{
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// about
+.about{
+  padding: 56px 0;
+  &__title{
+    line-height: $spacer * 5.25;
+    margin-bottom: 40px;
+  }
+  &__img{
+    margin-bottom: 20px;
+  }
+  &__list{
+    &__profile{
+      .profile__item{
+        line-height: 32px;
+      }
+    }
+    &__education{
+    }
+    &__experience{
+      padding: 0 14px;
+      .list__experience{
+        padding-top: 27px;
+        border-top: 1px solid $color-border-base;
+        text-align: center;
+        li + li{
+          margin-top: 28px;
+        }
+        li{
+          position: relative;
+          line-height: 32px;
+          // li文字已置中，padding-left向右推擠，文字略向右靠
+          padding-left: 36px;
+          &::before{
+            position: absolute;
+            content: "";
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: $color-bgc-dot;
+            // 讓偽元素取得y軸置中
+            top: 50%;
+            transform: translate(0%,-50%);
+          }
+          &:nth-child(1){
+            &::before{
+              left: 24px;
+            }
+          }
+          &:nth-child(2){
+            &::before{
+              left: 82px;
+            }
+          }
+          &:nth-child(3){
+            &::before{
+              left: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// myBrand
+.myBrand{
+  padding-top: $spacer * 3.5;
+  padding-bottom: $spacer * 7.5;
+  &__title{
+    line-height: $spacer * 5.25;
+    margin-bottom: $spacer * 0.75;
+  }
+  &__list{
+    & :first-child{
+      line-height: 32px;
+    }
+    & :last-child{
+      line-height: 30px;
+    }
+    margin-bottom: $spacer * 4.25;
+  }
+  &__img :nth-child(1n + 1) > img{
+    margin-bottom: 40px;
+  }
+}
+
+// work
+.work{
+  padding-top: $spacer * 3.5;
+  padding-bottom: $spacer * 6;
+  &__title{
+    line-height:  $spacer * 5.25;
+  }
+  &__list{
+    li{
+      line-height: 30px;
+      margin-bottom: $spacer * 3.5;
+    }
+    span{
+      line-height: 30px;
+    }
+  }
+  &__img :nth-child(1n + 1) > figcaption{
+    margin-top: $spacer;
+    margin-bottom: $spacer * 3;
+  }
+}
+
+
+.footer{
+  &__title{
+    line-height:  $spacer * 5.25;
+  }
+  &__nav{
+    .nav__item{
+      line-height: 33px;
+    }
+  }
+}
