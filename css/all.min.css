@@ -252,6 +252,10 @@ header {
   line-height: 33px;
 }
 
+.footer__nav .nav__item__link:hover {
+  text-decoration: underline;
+}
+
 .container-lg {
   width: 1920px;
 }

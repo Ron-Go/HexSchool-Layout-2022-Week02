@@ -140,6 +140,9 @@ header{
   &__nav{
     .nav__item{
       line-height: 33px;
+      &__link:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
