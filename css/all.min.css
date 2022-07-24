@@ -103,6 +103,7 @@ span {
 
 img {
   display: block;
+  vertical-align: middle;
 }
 
 figcaption {
@@ -205,16 +206,18 @@ header {
   margin-bottom: 0.75rem;
 }
 
-.myBrand__list {
+.myBrand__subtitle {
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.myBrand__caption {
+  font-size: 20px;
   margin-bottom: 4.25rem;
 }
 
-.myBrand__list :first-child {
-  line-height: 32px;
-}
-
-.myBrand__list :last-child {
-  line-height: 30px;
+.myBrand__caption span {
+  font-size: 20px;
 }
 
 .myBrand__img :nth-child(1n + 1) > img {
@@ -230,29 +233,32 @@ header {
   line-height: 5.25rem;
 }
 
-.work__list li {
-  line-height: 30px;
+.work__caption {
+  font-size: 20px;
   margin-bottom: 3.5rem;
 }
 
-.work__list span {
-  line-height: 30px;
+.work__caption span {
+  font-size: 20px;
 }
 
-.work__img :nth-child(1n + 1) > figcaption {
-  margin-top: 1rem;
+.work__list__img {
   margin-bottom: 3rem;
+}
+
+.work__list__img figcaption {
+  margin-top: 1rem;
 }
 
 .footer__title {
   line-height: 5.25rem;
 }
 
-.footer__nav .nav__item {
+.footer__list .list__item {
   line-height: 33px;
 }
 
-.footer__nav .nav__item__link:hover {
+.footer__list .list__item__link:hover {
   text-decoration: underline;
 }
 

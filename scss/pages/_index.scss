@@ -96,13 +96,15 @@ header{
     line-height: $spacer * 5.25;
     margin-bottom: $spacer * 0.75;
   }
-  &__list{
-    & :first-child{
-      line-height: 32px;
+  &__subtitle{
+    line-height: $spacer * 2;
+    margin-bottom: $spacer * 2;
+  }
+  &__caption{
+    & span {
+      font-size: 20px;
     }
-    & :last-child{
-      line-height: 30px;
-    }
+    font-size: 20px;
     margin-bottom: $spacer * 4.25;
   }
   &__img :nth-child(1n + 1) > img{
@@ -117,18 +119,20 @@ header{
   &__title{
     line-height:  $spacer * 5.25;
   }
-  &__list{
-    li{
-      line-height: 30px;
-      margin-bottom: $spacer * 3.5;
+  &__caption{
+    & span{
+      font-size: 20px;
     }
-    span{
-      line-height: 30px;
-    }
+    font-size: 20px;
+    margin-bottom: $spacer * 3.5;
   }
-  &__img :nth-child(1n + 1) > figcaption{
-    margin-top: $spacer;
-    margin-bottom: $spacer * 3;
+  &__list{
+    &__img{
+      margin-bottom: $spacer * 3;
+      & figcaption{
+        margin-top: $spacer;
+      }
+    } 
   }
 }
 
@@ -137,8 +141,8 @@ header{
   &__title{
     line-height:  $spacer * 5.25;
   }
-  &__nav{
-    .nav__item{
+  &__list{
+    .list__item{
       line-height: 33px;
       &__link:hover{
         text-decoration: underline;
